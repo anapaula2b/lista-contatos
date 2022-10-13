@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.listacontatos.R;
 import com.example.listacontatos.model.Pessoa;
@@ -47,6 +48,18 @@ public class ListaContatosAdapter extends BaseAdapter {
         }
 
         Pessoa pessoaAtual = (Pessoa) getItem(i);
-        return null;
+        //ImageView fotoPessoa = view.findViewById(R.id.imgPessoa);
+        TextView tvNomePessoa = view.findViewById(R.id.tv_nome_pessoa);
+        TextView tvEmailPessoa = view.findViewById(R.id.tv_email_pessoa);
+        TextView tvTelefonePessoa = view.findViewById(R.id.tv_telefone_pessoa);
+
+        //fotoPessoa.setImageResource(pessoaAtual.getDrawableImage());
+        tvNomePessoa.setText(pessoaAtual.getNome());
+        tvEmailPessoa.setText(pessoaAtual.getEmail());
+        tvTelefonePessoa.setText(pessoaAtual.getTelefone());
+
+
+        return view;
+
     }
 }

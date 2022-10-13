@@ -14,8 +14,8 @@
         android:theme="@style/Theme.ListaContatos"
         tools:targetApi="31">
         <activity
-            android:name=".controller.CadastrarPessoaLista"
-            android:exported="true">
+            android:name=".controller.Menu"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".controller.MainActivity"
+            android:name=".controller.CadastrarPessoaLista"
             android:exported="false">
 
         </activity>
+        <activity
+            android:name=".controller.MainActivity"
+            android:exported="false"></activity>
     </application>
 
 </manifest>
